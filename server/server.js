@@ -45,7 +45,7 @@ app.use('/api/dashboard', dashboardRoutes);
 
 // Serve Vite build in production
 if (isProd) {
-  const distPath = path.join(__dirname, '..', 'client', 'dist');
+  const distPath = path.join(__dirname, '..',  'dist');
   app.use(express.static(distPath));
   app.get('*', (_req, res) => res.sendFile(path.join(distPath, 'index.html')));
 }
